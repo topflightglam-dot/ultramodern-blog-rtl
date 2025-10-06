@@ -1,0 +1,14 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{ --bg:#f5f8fa; --fg:#0b1220; --brand:#186687; --accent:#e87517; --muted:#2e6573;
+--font-base:"Tajawal", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Kufi Arabic","Noto Sans Arabic", Arial;
+--font-heading:"Cairo", ui-sans-serif, "Noto Kufi Arabic","Noto Sans Arabic";
+}
+.dark{ --bg:#0b1220; --fg:#e5e7eb; --muted:#9ca3af; }
+body{ background:var(--bg); color:var(--fg); font-family:var(--font-base) }
+.container{ @apply max-w-3xl mx-auto px-4; }
+.card{ @apply rounded-2xl border border-slate-200 bg-white shadow-sm; }
+.dark .card{ @apply border-slate-800 bg-slate-900; }
+a{ color:var(--brand) } a:hover{ color:var(--accent) }
+.ar-prose :where(h1,h2,h3){ font-family:var(--font-heading) }
+.ar-prose img, .ar-prose video, .ar-prose iframe, .ar-prose object{ max-width:100%; height:auto; border-radius:1rem; }
+#progress-bar{ position:fixed; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, var(--brand), var(--accent)); transform:scaleX(0); transform-origin:0 50%; z-index:50 }
